@@ -1,0 +1,37 @@
+//To group  the pupils into 4buses
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	//declare the variable student id
+	int idnum;
+	double result;
+	//prompt the user to enter the student id
+	cout << "Please enter the student id number ranges 100-200 and press 999 to exit the program" << endl;
+	cin >> idnum;
+	
+	//do thw while loop
+	while(idnum != 999)
+	{
+		if (idnum >= 100 && idnum <= 200)				//to check either the input by user is valid or not
+		{
+			result = idnum / 5;
+			if (result >= 20 && result <= 25)
+				cout << "Bus A" << endl;
+			else
+			if (result > 25 && result <= 30)
+				cout << "Bus B" << endl;
+			else
+			if (result >= 30 && result <= 35)
+				cout << "Bus C" << endl;
+			else
+				cout << "Bus D" << endl;
+		}
+		else
+			cout << "You have enter an invalid student id number" << endl;
+			cin >> idnum;														//updating the input by user
+	}//endwhile
+
+	return 0;
+}
